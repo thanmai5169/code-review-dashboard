@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Dark Mode Default Theme (GitHub Dark + VS Code IDE theme style) */
+  --bg-0: #0d1117;
+  --bg-1: #161b22;
+  --bg-2: #21262d;
+  --border: #30363d;
+  --accent: #58a6ff;
+  --accent2: #bc8cff;
+  --success: #3fb950;
+  --warning: #d29922;
+  --danger: #f85149;
+  --text-1: #e6edf3;
+  --text-2: #8b949e;
+}
+
+:root.light {
+  /* Light Mode Variables override */
+  --bg-0: #f6f8fa;
+  --bg-1: #ffffff;
+  --bg-2: #f0f3f6;
+  --border: #d0d7de;
+  --accent: #0969da;
+  --accent2: #8250df;
+  --success: #1a7f37;
+  --warning: #9a6700;
+  --danger: #cf222e;
+  --text-1: #24292f;
+  --text-2: #57606a;
+}
+
+/* Custom Scrollbar Styles for IDE experience */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-0);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-2);
+}
+
+body {
+  background-color: var(--bg-0);
+  color: var(--text-1);
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* Monaco decoration custom highlights */
+.monaco-highlight-critical {
+  background: rgba(248, 81, 73, 0.2) !important;
+  border-bottom: 2px dashed #f85149 !important;
+}
+
+.monaco-highlight-high {
+  background: rgba(210, 153, 34, 0.2) !important;
+  border-bottom: 2px dashed #d29922 !important;
+}
+
+.monaco-highlight-medium {
+  background: rgba(188, 140, 255, 0.2) !important;
+  border-bottom: 2px dashed #bc8cff !important;
+}
+
+.monaco-highlight-low {
+  background: rgba(88, 166, 255, 0.2) !important;
+  border-bottom: 2px dashed #58a6ff !important;
+}
